@@ -53,4 +53,10 @@ class CourseBookingSystemApplicationTests {
 		assertEquals(2, foundCustomers.size());
 	}
 
+	@Test
+	public void getAllCoursesByCustomer() {
+		List<Course> foundCourse = courseRepository.getAllCoursesByCustomer("Alex");
+		assertEquals("Java", foundCourse.get(0).getName());
+	}
+
 }
