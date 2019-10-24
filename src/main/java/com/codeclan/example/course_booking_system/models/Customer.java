@@ -24,8 +24,8 @@ public class Customer {
     @Column(name = "age")
     private int age;
 
-    @JsonIgnoreProperties(value = "customers")
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY) //customer property in Booking class
+    @JsonIgnoreProperties(value = "customer")
+    @OneToMany(mappedBy = "customer") //customer property in Booking class
     private List<Booking> customerBookings;
 
     public Customer(String name, int age, String town) {
